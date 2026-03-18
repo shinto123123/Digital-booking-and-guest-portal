@@ -1,0 +1,192 @@
+/* ================= FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* ================= NAV ================= */
+.nav {
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+  background: linear-gradient(180deg, #0a0a0a 0%, #141210 100%);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 70px;
+}
+.logo {
+  height: 200px;
+}
+.menu a {
+  margin-left: 24px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.menu .reserve {
+  border: 1px solid #caa86a;
+  padding: 8px 18px;
+  color: #caa86a;
+  border-radius: 4px;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-overlay {
+  position: relative;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+
+.breadcrumb {
+  margin-top: 12px;
+  font-size: 13px;
+}
+.breadcrumb a {
+  color: #caa86a;
+  text-decoration: none;
+}
+
+/* ================= ROOM DETAILS ================= */
+.room-details {
+  padding: 110px 20px;
+  text-align: center;
+}
+.room-container {
+  max-width: 950px;
+  margin: auto;
+}
+.room-title {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+.room-price-box {
+  margin: 25px 0 40px;
+}
+.price {
+  font-size: 24px;
+  color: #caa86a;
+  margin-bottom: 10px;
+}
+.reserve-btn {
+  display: inline-block;
+  padding: 12px 36px;
+  background: #caa86a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.room-description {
+  max-width: 780px;
+  margin: 0 auto 60px;
+  line-height: 1.8;
+}
+
+/* ================= GALLERY ================= */
+.room-gallery {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.room-gallery img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+/* ================= AMENITIES ================= */
+.room-amenities {
+  background: #f8f8f8;
+  padding: 100px 20px;
+}
+.amenities-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+.amenity {
+  text-align: center;
+  font-size: 14px;
+}
+.amenity i {
+  display: block;
+  font-size: 22px;
+  color: #caa86a;
+  margin-bottom: 8px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 60px 70px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* ================= SAFE ANIMATIONS ================= */
+.fade-in,
+.fade-up,
+.fade-left,
+.fade-right,
+.amenity {
+  opacity: 1;
+}
+
+.fade-up.show {
+  animation: fadeUp 0.8s ease forwards;
+}
+.fade-in.show {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
